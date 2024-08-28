@@ -10,7 +10,7 @@ public class arquivo1 {
 		String name ;
 		
 		Scanner x = new Scanner(System.in);
-		System.out.println("Digite sua idade e nome");
+		System.out.println("Digite sua idade e nomeeeee");
 		age = x.nextInt();
 		name = x.nextLine();
 		System.out.printf("o tamanho da string é %s\n",name.length());
