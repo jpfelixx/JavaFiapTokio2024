@@ -1,6 +1,6 @@
 package exercicios.aula05;
 
-public class ex1 {
+public class ex01 {
 
 	public static void main(String[] args) {	
 		
@@ -11,6 +11,8 @@ public class ex1 {
 		System.out.println("Nome:"+nome);
 		System.out.println("Endereço"+endereco);
 		System.out.println("CEP"+cep);
-		System.out.println("Telefone"+tel);}	
+		System.out.println("Telefone"+tel);
+		}	
 	
 }
+

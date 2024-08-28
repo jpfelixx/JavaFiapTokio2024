@@ -1,6 +1,6 @@
 package exercicios.aula05;
 
-public class ex2 {
+public class ex02 {
 
 	public static void main(String[] args) {
     float a = 6.6f;
