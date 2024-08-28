@@ -14,6 +14,8 @@ public class ex2 {
       String str3 = Integer.toString(c);
       
       System.out.println("a:"+str1+" b:"+str2+" c:"+str3);
+      
+      
 
 
 

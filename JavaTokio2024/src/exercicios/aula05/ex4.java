@@ -14,6 +14,8 @@ public class ex4 {
 		double nt2 = scan.nextDouble();
 		double m = nt1+nt2/2;
 		System.out.printf("Sua nota final é %.2f:", m);
+		
+		 scan.close();
 
 	}
 
