@@ -24,5 +24,5 @@ public class ex6 {
        double valorfinal=((nmrpeca1*valor1)+(nmrpeca2*valor2));
        System.out.println(valorfinal);
 	}
-
+ //bodia
 }
