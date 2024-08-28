@@ -10,10 +10,9 @@ public class ex07 {
 		float valor = scan.nextFloat();
 		System.out.println("Digite o valor do valor pago");
 		float valorpago = scan.nextFloat();
-		
 		float troco= valorpago-valor;
 		System.out.println("o seu troco é:"+troco);
-	     scan.close();
+	    scan.close();
 	}
 	
 }

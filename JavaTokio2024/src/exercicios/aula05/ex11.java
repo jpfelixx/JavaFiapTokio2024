@@ -9,9 +9,8 @@ public class ex11 {
 		System.out.println("Entre com a quantidade de dias");
 		int diasvividos = scan.nextInt();
 		
-		 int anos;
-		 int meses;
-		 int dias;
+		 int anos,meses,dias;
+		 
 		 anos = diasvividos/365;
 		 meses = (diasvividos%365)/30;
 		 dias = (diasvividos%365)%30;
@@ -21,7 +20,6 @@ public class ex11 {
 		 System.out.println("dias: "+dias);
 		 
 		 scan.close();
-
 
 		
 	}

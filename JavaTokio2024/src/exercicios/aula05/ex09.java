@@ -8,9 +8,8 @@ public class ex09 {
 		
 	 System.out.println("Digite um número");
 	 int valor = scan.nextInt();
-	 int unidade;
-	 int dezena ;
-	 int centena;
+	 int unidade,dezena,centena;
+	 
 	 centena = valor/100;
 	 dezena = (valor%100)/10;
 	 unidade = (valor%100)%10;
@@ -20,7 +19,6 @@ public class ex09 {
 	 System.out.println("unidade: "+unidade);
 
 
-	
 	 scan.close();
 	
 	 
