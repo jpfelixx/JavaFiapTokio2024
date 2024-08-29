@@ -13,6 +13,10 @@ public class ex01 {
 		 else
 			 System.out.println("impar");
 		//teste	 
+		 
+		scan.close();
+
 	}
+
 
 }
