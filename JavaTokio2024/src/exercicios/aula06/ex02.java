@@ -18,7 +18,8 @@ public class ex02 {
 		 }
 		 
 		 else
-			 System.out.println("Os valores digitados são igauis");
+			 System.out.println("Os valores digitados são iguais");
+		 
 	}
 
 }
