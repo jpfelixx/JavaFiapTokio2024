@@ -12,7 +12,7 @@ public class ex01 {
 			 System.out.println("par");
 		 else
 			 System.out.println("impar");
-			 
+		//teste	 
 	}
 
 }
