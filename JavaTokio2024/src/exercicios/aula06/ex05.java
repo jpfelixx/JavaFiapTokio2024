@@ -36,6 +36,7 @@ public class ex05 {
 	System.out.println("O resultado da operação é"+resultado);
 		
 		scan.close();
+		//teste
 	}
 
 }
