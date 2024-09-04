@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ex11 {
 
 	public static void main(String[] args) {
-
+//teste
 		Scanner scan = new Scanner (System.in);
 		int codigoestado,codigocarga;
 		float pesocarga,precocarga = 0;
