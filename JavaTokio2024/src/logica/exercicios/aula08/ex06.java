@@ -9,6 +9,8 @@ public class ex06 {
 		
 		int par = 0,primo = 0 , impar=0,cont =0;
 		Random r = new Random();
+		
+		//teste
 				
 		for (int i = 0; i <7 ; i++) {
 			int a = r.nextInt(1,10);
