@@ -8,7 +8,7 @@ public class ex07 {
 		Scanner scan = new Scanner(System.in);
 		
 	
-		
+		//teste
 		scan.close();
 		
 	}
