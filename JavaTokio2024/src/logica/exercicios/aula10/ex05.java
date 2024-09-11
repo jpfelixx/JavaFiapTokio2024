@@ -14,6 +14,7 @@ public class ex05 {
 		
 		calcularTemp(temp, op);
 		 scan.close();
+		 //teste
 	}
 	
 	public static void calcularTemp(double a, char d) {
