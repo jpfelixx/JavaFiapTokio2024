@@ -9,14 +9,14 @@ public class ex05 {
 		double num = 0;
 		int min = 5;
 		int max = 10;
-				
+
 		for (int i = 0; i <= 9; i++) {
 			double a = min + Math.random() * (max - min);
-			num+=a;
+			num += a;
 			System.out.println(a);
-			
+
 		}
-		System.out.println("A soma é "+num);
+		System.out.println("A soma é " + num);
 	}
 
 }

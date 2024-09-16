@@ -1,8 +1,8 @@
-package logica.exercicios.aula10;
+package logica.exercicios.aula11;
 
 import java.util.Scanner;
 
-public class ex05 {
+public class ex04 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -11,13 +11,15 @@ public class ex05 {
 		scan.nextLine();
 		System.out.println("Qual o valor: ");
 		char op = scan.nextLine().charAt(0);
+		System.out.println("Qual o valor que vc deseja retornar: ");
+		char r = scan.nextLine().charAt(0);
 
-		calcularTemp(temp, op);
+		System.out.println("retorno: " + calcularTemp(temp, op, r));
 		scan.close();
 		// teste
 	}
 
-	public static void calcularTemp(double a, char d) {
+	public static double calcularTemp(double a, char d, char r) {
 		double k = 0.0;
 		double c = 0.0;
 		double f = 0.0;
@@ -39,8 +41,18 @@ public class ex05 {
 			k = ((a - 32) * 5 / 9) + 273.15;
 			c = ((a - 32) * 5 / 9);
 		}
+		System.out.printf("Fahrenheit:%.1f\nKelvin:%.1f\nCelcius:%.1f\n", f, k, c);
 
-		System.out.printf("Fahrenheit:%.1f\nKelvin:%.1f\nCelcius:%.1f", f, k, c);
+		switch (r) {
+		case 'F':
+			return f;
+		case 'K':
+			return k;
+		case 'C':
+			return c;
+		}
+
+		return 0;
 
 	}
 
