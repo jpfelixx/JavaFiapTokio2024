@@ -14,6 +14,8 @@ public class arquivo1 {
 		System.out.println("Digite sua idade e nomeeeee");
 		age = x.nextInt();
 		name = x.nextLine();
+		name = x.nextLine();
+
 		System.out.printf("o tamanho da string é %s\n", name.length());
 
 		for (int i = 0; i <= 10; i++) {
