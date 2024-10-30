@@ -3,11 +3,19 @@ package br.fiap.fabricaVeiculos;
 public class TesteCaminhao {
 
     public static void main(String[] args) {
+        // Criando um objeto Motor
+        Motor motor = new Motor("OM 457 LA", 400); // Exemplo de potência
+
+        // Criando uma carga
+        Carga carga = new Carga(10000, 0, "Carga Geral");
+
+        // Criando um condutor
+        Condutor condutor = new Condutor("João", "123456789", "987654321");
+
         // Criando um objeto Caminhao
         Caminhao caminhao = new Caminhao("Mercedes", "Actros", "Preto", "2020", "2021", 
-                                           "123456789", "OM 457 LA", "Automático", 
-                                           "22", 0.0, 10000.0, 0.0, "Carga Geral", 
-                                           3, "João", false);
+                                           "123456789", motor, "Automático", 
+                                           "22", 0.0, carga, 3, condutor, false);
 
         // Ligando o caminhão
         caminhao.ligar();

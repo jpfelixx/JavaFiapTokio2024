@@ -10,23 +10,18 @@ public class Carro {
 	private String anofabrica;
 	private String anoModelo;
 	private String renavam;
-	private String motor;
+    private Motor motor;
 	private String tipocambio;
 	private String arosRodas;
 	private double velocidade;
-	private String nomeCondutor;
+	private Condutor condutor;
 	private boolean ligado;
 
-	public String getMarca() {
-		return marca;
-	}
-
-	public void setMarca(String marca) {
-		this.marca = marca;
-	}
+	
 
 	public Carro(String marca, String modelo, String cor, String anofabrica, String anoModelo, String renavam,
-			String motor, String tipocambio, String arosRodas, double velocidade, String nomeCondutor) {
+			Motor motor, String tipocambio, String arosRodas, double velocidade, Condutor condutor,
+			boolean ligado) {
 		super();
 		this.marca = marca;
 		this.modelo = modelo;
@@ -38,97 +33,130 @@ public class Carro {
 		this.tipocambio = tipocambio;
 		this.arosRodas = arosRodas;
 		this.velocidade = velocidade;
-		this.nomeCondutor = nomeCondutor;
-		this.ligado = false;
+		this.condutor = condutor;
+		this.ligado = ligado;
 	}
+	
+
+	public String getMarca() {
+		return marca;
+	}
+
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
 
 	public String getModelo() {
 		return modelo;
 	}
 
+
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
+
 
 	public String getCor() {
 		return cor;
 	}
 
+
 	public void setCor(String cor) {
 		this.cor = cor;
 	}
+
 
 	public String getAnofabrica() {
 		return anofabrica;
 	}
 
+
 	public void setAnofabrica(String anofabrica) {
 		this.anofabrica = anofabrica;
 	}
+
 
 	public String getAnoModelo() {
 		return anoModelo;
 	}
 
+
 	public void setAnoModelo(String anoModelo) {
 		this.anoModelo = anoModelo;
 	}
+
 
 	public String getRenavam() {
 		return renavam;
 	}
 
+
 	public void setRenavam(String renavam) {
 		this.renavam = renavam;
 	}
 
-	public String getMotor() {
+
+	public Motor getMotor() {
 		return motor;
 	}
 
-	public void setMotor(String motor) {
+
+	public void setMotor(Motor motor) {
 		this.motor = motor;
 	}
+
 
 	public String getTipocambio() {
 		return tipocambio;
 	}
 
+
 	public void setTipocambio(String tipocambio) {
 		this.tipocambio = tipocambio;
 	}
+
 
 	public String getArosRodas() {
 		return arosRodas;
 	}
 
+
 	public void setArosRodas(String arosRodas) {
 		this.arosRodas = arosRodas;
 	}
+
 
 	public double getVelocidade() {
 		return velocidade;
 	}
 
+
 	public void setVelocidade(double velocidade) {
 		this.velocidade = velocidade;
 	}
 
-	public String getNomeCondutor() {
-		return nomeCondutor;
+
+	public Condutor getCondutor() {
+		return condutor;
 	}
 
-	public void setNomeCondutor(String nomeCondutor) {
-		this.nomeCondutor = nomeCondutor;
+
+	public void setCondutor(Condutor condutor) {
+		this.condutor = condutor;
 	}
+
 
 	public boolean isLigado() {
 		return ligado;
 	}
 
+
 	public void setLigado(boolean ligado) {
 		this.ligado = ligado;
 	}
+
 
 	public void acelerar(double ace, int tempo, int limite) {
 		if (this.ligado) {

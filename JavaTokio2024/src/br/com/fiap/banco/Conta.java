@@ -4,18 +4,40 @@ package br.com.fiap.banco;
 
 public class Conta {
 
-	private String nome;
-	private String cpf;
+
+	private Cliente cliente;
 	private String nrConta;
 	private double saldo;
+	
+	
 
-	public Conta(String nome, String cpf, String nrConta, double saldo) {
+	public Conta(Cliente cliente, String nrConta, double saldo) {
 		super();
-		this.nome = nome;
-		this.cpf = cpf;
+		this.cliente = cliente;
 		this.nrConta = nrConta;
 		this.saldo = saldo;
 	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public String getNrConta() {
+		return nrConta;
+	}
+
+	public void setNrConta(String nrConta) {
+		this.nrConta = nrConta;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
 	
 	//adress mod
 
@@ -29,6 +51,8 @@ public class Conta {
 		}
 
 	}
+
+
 
 	public void depositar(double vs) {
 

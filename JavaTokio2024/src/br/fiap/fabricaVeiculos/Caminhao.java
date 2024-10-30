@@ -8,39 +8,38 @@ public class Caminhao {
     private String anofabrica;
     private String anoModelo;
     private String renavam;
-    private String motor;
+    private Motor motor;
     private String tipocambio;
     private String arosRodas;
     private double velocidade;
-    private double qntdcargasupo; // Capacidade máxima de carga
-    private double qntdcargasupoAbas; // Carga atual
-    private String tipoCarga;
+    private Carga carga;
     private int eixos;
-    private String nomeCondutor;
+    private Condutor condutor;
     private boolean ligado;
 
-    public Caminhao(String marca, String modelo, String cor, String anofabrica, String anoModelo, String renavam,
-                    String motor, String tipocambio, String arosRodas, double velocidade, double qntdcargasupo,
-                    double qntdcargasupoAbas, String tipoCarga, int eixos, String nomeCondutor, boolean ligado) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.cor = cor;
-        this.anofabrica = anofabrica;
-        this.anoModelo = anoModelo;
-        this.renavam = renavam;
-        this.motor = motor;
-        this.tipocambio = tipocambio;
-        this.arosRodas = arosRodas;
-        this.velocidade = velocidade;
-        this.qntdcargasupo = qntdcargasupo;
-        this.qntdcargasupoAbas = qntdcargasupoAbas;
-        this.tipoCarga = tipoCarga;
-        this.eixos = eixos;
-        this.nomeCondutor = nomeCondutor;
-        this.ligado = ligado;
-    }
+   
 
-    public void ligar() {
+    public Caminhao(String marca, String modelo, String cor, String anofabrica, String anoModelo, String renavam,
+			Motor motor, String tipocambio, String arosRodas, double velocidade, Carga carga, int eixos,
+			Condutor condutor, boolean ligado) {
+		super();
+		this.marca = marca;
+		this.modelo = modelo;
+		this.cor = cor;
+		this.anofabrica = anofabrica;
+		this.anoModelo = anoModelo;
+		this.renavam = renavam;
+		this.motor = motor;
+		this.tipocambio = tipocambio;
+		this.arosRodas = arosRodas;
+		this.velocidade = velocidade;
+		this.carga = carga;
+		this.eixos = eixos;
+		this.condutor = condutor;
+		this.ligado = ligado;
+	}
+
+	public void ligar() {
         this.ligado = true;
         System.out.println("Caminhão ligado.");
     }
@@ -83,21 +82,21 @@ public class Caminhao {
     }
 
     public void carregar(int qtd) {
-        if (qntdcargasupoAbas + qtd <= qntdcargasupo) {
-            qntdcargasupoAbas += qtd;
-            System.out.println("Carga carregada. Carga total agora: " + qntdcargasupoAbas);
+        if (carga.getQntdcargasupoAbas() + qtd <= carga.getQntdcargasupo()) {
+        	carga.setQntdcargasupoAbas(carga.getQntdcargasupoAbas()+qtd);
+            System.out.println("Carga carregada. Carga total agora: " + carga.getQntdcargasupoAbas());
         } else {
             System.out.println("Carga não pode ser carregada. Capacidade excedida.");
         }
     }
 
     public void descarregar(int qtd) {
-        if (qntdcargasupoAbas >= qtd) {
-            qntdcargasupoAbas -= qtd;
-            System.out.println("Carga descarregada. Carga total agora: " + qntdcargasupoAbas);
+        if (carga.getQntdcargasupoAbas()  >= qtd) {
+            carga.setQntdcargasupoAbas(carga.getQntdcargasupoAbas()-qtd); 
+            System.out.println("Carga descarregada. Carga total agora: " + carga.getQntdcargasupoAbas());
         } else {
             System.out.println("Não há carga suficiente para descarregar.");
-            qntdcargasupoAbas = 0;
+            carga.setQntdcargasupoAbas(0);
         }
     }
 }
