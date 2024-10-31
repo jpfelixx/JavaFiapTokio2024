@@ -1,4 +1,7 @@
-package br.com.fiap.banco;
+package br.com.fiap.banco.Mains;
+
+import br.com.fiap.banco.Cliente;
+import br.com.fiap.banco.ContaCorrente;
 
 public class MainConta {
 
@@ -6,8 +9,8 @@ public class MainConta {
 
 		Cliente juan = new Cliente("juanito","12345678910");
 		Cliente Mih = new Cliente("Millena","1012345623");
-		Conta a = new Conta(juan,"1010101010",10000.00);
-		Conta b = new Conta(Mih,"121212121",10000.00);
+		ContaCorrente a = new ContaCorrente(juan,"1010101010",10000.00);
+		ContaCorrente b = new ContaCorrente(Mih,"121212121",10000.00);
 
 	
 		System.out.println(a.ConsultarSaldo());
@@ -26,7 +29,10 @@ public class MainConta {
 		
 		a.Sacar(120);
 		System.out.println(a.ConsultarSaldo());
+		
 
+		
+		
 	}
 
 }

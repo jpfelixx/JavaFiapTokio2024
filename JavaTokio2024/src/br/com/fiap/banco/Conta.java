@@ -2,14 +2,11 @@ package br.com.fiap.banco;
 
 //alt+shift+S --> Generate
 
-public class Conta {
-
+public abstract class Conta {
 
 	private Cliente cliente;
 	private String nrConta;
 	private double saldo;
-	
-	
 
 	public Conta(Cliente cliente, String nrConta, double saldo) {
 		super();
@@ -17,6 +14,8 @@ public class Conta {
 		this.nrConta = nrConta;
 		this.saldo = saldo;
 	}
+
+	public abstract void exibirSaldo();
 
 	public Cliente getCliente() {
 		return cliente;
@@ -34,25 +33,29 @@ public class Conta {
 		this.nrConta = nrConta;
 	}
 
-	public double getSaldo() {
-		return saldo;
-	}
+	public boolean Sacar(double vs) {
 
-	
-	//adress mod
+		if (this.saldo < vs) {
+			System.out.println("Saque superior ao saldo!");
+			return false;
 
-	public void Sacar(double vs) {
-
-		if (this.saldo < vs)
-			System.out.println("Valor insuficiente no saldo para realizar tal operação");
+		}
 		else {
-			System.out.println("saque realizado com sucesso!");
+
 			this.saldo -= vs;
+			return true;
+
 		}
 
 	}
 
+	public double getSaldo() {
+		return saldo;
+	}
 
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 
 	public void depositar(double vs) {
 
@@ -72,11 +75,6 @@ public class Conta {
 			b.setSaldo(b.ConsultarSaldo() + s);
 		}
 
-		
-	}
-
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
 	}
 
 }

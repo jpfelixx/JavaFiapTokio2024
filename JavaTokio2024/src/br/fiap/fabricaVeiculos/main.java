@@ -17,6 +17,8 @@ public class main {
 		carro1.acelerar(3, 2,12);
 		carro1.frear(17);
 		System.out.println(carro1.getVelocidade());
+		
+		
 	
 		
 		
