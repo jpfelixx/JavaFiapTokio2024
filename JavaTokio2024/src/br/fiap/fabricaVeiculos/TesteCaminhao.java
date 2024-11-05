@@ -9,8 +9,7 @@ public class TesteCaminhao {
         // Criando uma carga
         Carga carga = new Carga(10000, 0, "Carga Geral");
 
-        // Criando um condutor
-        Condutor condutor = new Condutor("João", "123456789", "987654321");
+        
 
         // Criando um objeto Caminhao
         Caminhao caminhao = new Caminhao("Mercedes", "Actros", "Preto", "2020", "2021", 

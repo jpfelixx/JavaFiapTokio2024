@@ -204,7 +204,7 @@ public class Carro {
 		return "Carro [marca=" + marca + ", modelo=" + modelo + ", cor=" + cor + ", anofabrica=" + anofabrica
 				+ ", anoModelo=" + anoModelo + ", renavam=" + renavam + ", motor=" + motor + ", tipocambio="
 				+ tipocambio + ", arosRodas=" + arosRodas + ", velocidade=" + velocidade + ", nomeCondutor="
-				+ nomeCondutor + ", ligado=" + ligado + "]";
+				+ condutor.getNome() + ", ligado=" + ligado + "]";
 	}
 
 }

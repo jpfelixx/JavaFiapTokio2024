@@ -2,6 +2,7 @@ package br.com.fiap.banco.Mains;
 
 import br.com.fiap.banco.Cliente;
 import br.com.fiap.banco.ContaCorrente;
+import br.com.fiap.banco.SaldoInsuficiente;
 
 public class MainConta {
 
@@ -9,14 +10,19 @@ public class MainConta {
 
 		Cliente juan = new Cliente("juanito","12345678910");
 		Cliente Mih = new Cliente("Millena","1012345623");
-		ContaCorrente a = new ContaCorrente(juan,"1010101010",10000.00);
-		ContaCorrente b = new ContaCorrente(Mih,"121212121",10000.00);
+		ContaCorrente a = new ContaCorrente(juan,"1010101010",100.00);
+		ContaCorrente b = new ContaCorrente(Mih,"121212121",100.00);
 
 	
 		System.out.println(a.ConsultarSaldo());
 		System.out.println(b.ConsultarSaldo());
 		
-		a.TransferirSaldo(b,120.00);
+		try {
+			a.TransferirSaldo(b,120.00);
+		} catch (SaldoInsuficiente e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.out.println(a.ConsultarSaldo());
 		System.out.println(b.ConsultarSaldo());
@@ -27,7 +33,12 @@ public class MainConta {
 
 		System.out.println(a.ConsultarSaldo());
 		
-		a.Sacar(120);
+		try {
+			a.Sacar(120);
+		} catch (SaldoInsuficiente e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println(a.ConsultarSaldo());
 		
 

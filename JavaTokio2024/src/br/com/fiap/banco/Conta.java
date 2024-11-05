@@ -33,11 +33,10 @@ public abstract class Conta {
 		this.nrConta = nrConta;
 	}
 
-	public boolean Sacar(double vs) {
+	public boolean Sacar(double vs) throws SaldoInsuficiente {
 
 		if (this.saldo < vs) {
-			System.out.println("Saque superior ao saldo!");
-			return false;
+			 throw new SaldoInsuficiente("Saldo Superior ao saque");
 
 		}
 		else {
@@ -67,9 +66,9 @@ public abstract class Conta {
 		return saldo;
 	}
 
-	public void TransferirSaldo(Conta b, double s) {
+	public void TransferirSaldo(Conta b, double s) throws SaldoInsuficiente {
 		if (this.ConsultarSaldo() < s)
-			System.out.println("Saldo insuficiente");
+			 throw new SaldoInsuficiente("Saldo Insuficiente");
 		else {
 			this.setSaldo(this.ConsultarSaldo() - s);
 			b.setSaldo(b.ConsultarSaldo() + s);

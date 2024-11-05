@@ -28,8 +28,13 @@ public class ContaCorrente extends Conta  {
 	}
 
 	public void investir(Produto produto, double valor) {
-		if(this.Sacar(valor))
-			this.saldoInvestimento+=produto.investir(valor);
+		try {
+			if(this.Sacar(valor))
+				this.saldoInvestimento+=produto.investir(valor);
+		} catch (SaldoInsuficiente e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 	}
