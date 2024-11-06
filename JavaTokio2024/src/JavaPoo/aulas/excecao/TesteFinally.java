@@ -1,4 +1,4 @@
-package JavaPoo.aulas;
+package JavaPoo.aulas.excecao;
 
 public class TesteFinally {
 
