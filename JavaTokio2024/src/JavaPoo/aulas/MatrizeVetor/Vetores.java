@@ -1,4 +1,4 @@
-package JavaPoo.aulas;
+package JavaPoo.aulas.MatrizeVetor;
 
 public class Vetores {
 
