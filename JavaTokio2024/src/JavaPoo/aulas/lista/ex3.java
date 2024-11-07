@@ -13,30 +13,28 @@ public class ex3 {
 	public static void main(String[] args) {
 		Collection<Integer> mtn = new LinkedList<>();
 		Random r = new Random();
-		
-		
-		long inicio  = System.currentTimeMillis();
-	 for (int i = 0; i <1000000; i++) {
-		 mtn.add(r.nextInt(1,10));	 
+
+		long inicio = System.currentTimeMillis();
+		for (int i = 0; i < 100000000; i++) {
+			mtn.add(r.nextInt(1, 10));
+		}
+		long fim = System.currentTimeMillis();
+		long tempogasto = fim - inicio;
+		System.out.println("tempo gasto é " + tempogasto);
 	}
-	 long fim  = System.currentTimeMillis();
-	 long tempogasto = fim-inicio;
-	 System.out.println("tempo gasto é "+tempogasto);
-	}
-    //50000
-	//Arraylist --> 6s
-    // HashSet--> 5s
-	//LinkedList -->4s
-	
-	
-	//100000
-	//Arraylist --> 6s
-    // HashSet--> 9s
-	//LinkedList -->7s
-	
-	//1000000
-	//Arraylist --> 23s
+	// 50000
+	// Arraylist --> 6s
+	// HashSet--> 5s
+	// LinkedList -->4s
+
+	// 100000
+	// Arraylist --> 6s
+	// HashSet--> 9s
+	// LinkedList -->7s
+
+	// 1000000
+	// Arraylist --> 23s
 	// HashSet--> 18s
-	//LinkedList -->144s
+	// LinkedList -->144s
 
 }
