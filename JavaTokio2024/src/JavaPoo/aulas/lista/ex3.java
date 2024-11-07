@@ -14,6 +14,7 @@ public class ex3 {
 		Collection<Integer> mtn = new LinkedList<>();
 		Random r = new Random();
 		
+		
 		long inicio  = System.currentTimeMillis();
 	 for (int i = 0; i <1000000; i++) {
 		 mtn.add(r.nextInt(1,10));	 
