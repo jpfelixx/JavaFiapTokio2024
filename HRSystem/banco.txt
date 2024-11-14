@@ -54,5 +54,16 @@ END;
 /
 
 
+        Candidato joao = new Candidato("João Silva","1234-5678","joao.silva@email.com","Rua A, 123","Superior Completo",Date.valueOf("1990-05-15"), Genero.fromCodigo("F"),5.0f,1);
+        Candidato carlos = new Candidato("Carlos Souza", "4567-8901", "carlos.souza@email.com", "Avenida C, 789", "Superior Incompleto", Date.valueOf("1988-11-10"), Genero.fromCodigo("M"), 6.2f, 2);
+        Candidato anaCosta = new Candidato("Ana Costa", "1122-3344", "ana.costa@email.com", "Praça D, 101", "Pós-Graduação", Date.valueOf("1985-03-05"), Genero.fromCodigo("f"), 7.3f, 3);
 
+        List<Candidato> candidatos = new ArrayList<Candidato>();
+        candidatoDAO.inserir(joao);
+        candidatoDAO.inserir(carlos);
+        candidatoDAO.inserir(anaCosta);
+
+controller --> Faz a instância mais direta, renomeia os métodos
+
+Singleton --> Criar uma única instância
 

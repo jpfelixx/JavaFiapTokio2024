@@ -14,7 +14,6 @@ public class ConnectionFactory {
 			e.printStackTrace();
 		}
 		return null;
-		
 		//JDBC --> Especificação do Java para conexão com o BDD
 		//JPA--> Usa Framework
 	}

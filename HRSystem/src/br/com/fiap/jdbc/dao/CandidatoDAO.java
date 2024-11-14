@@ -16,7 +16,12 @@ public class CandidatoDAO {
     }
 
    
-    public void inserir(Candidato candidato) {
+    public CandidatoDAO(Connection connection) {
+    	this.conexao = connection;
+	}
+
+
+	public void inserir(Candidato candidato) {
         String sql = "INSERT INTO candidato(nome, telefone, email, endereco, formacao, data_nasc, genero, tempo_experiencia, idArea) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement stmt = conexao.prepareStatement(sql)) {
             stmt.setString(1, candidato.getNome());
@@ -88,7 +93,7 @@ public class CandidatoDAO {
                 candidato.setEndereco(rs.getString("endereco"));
                 candidato.setFormacao(rs.getString("formacao"));
                 candidato.setData_nasc(rs.getDate("data_nasc"));
-                candidato.setGenero((Genero)(rs.getObject("genero")));  // Convertendo de String para enum Genero
+                candidato.setGenero(Genero.valueOf(rs.getString("genero")));  // Convertendo de String para enum Genero
                 candidato.setTempo_experiencia(rs.getFloat("tempo_experiencia"));
                 candidato.setIdArea(rs.getLong("idArea"));
                 
@@ -122,7 +127,7 @@ public class CandidatoDAO {
                     candidato.setEndereco(rs.getString("endereco"));
                     candidato.setFormacao(rs.getString("formacao"));
                     candidato.setData_nasc(rs.getDate("data_nasc"));
-                    candidato.setGenero((Genero)(rs.getObject("genero")));  // Convertendo de String para enum Genero
+                    candidato.setGenero(Genero.valueOf(rs.getString("genero")));  // Convertendo de String para enum Genero
                     candidato.setTempo_experiencia(rs.getFloat("tempo_experiencia"));
                     candidato.setIdArea(rs.getLong("idArea"));
                 }

@@ -1,9 +1,8 @@
 package br.com.fiap.jdbc.model;
 
 public class areaAtuacao {
-	private   long idArea;
-	private  String  nome;
-	
+	private long idArea;
+	private String nome;
 
 	public areaAtuacao() {
 		super();
@@ -12,7 +11,7 @@ public class areaAtuacao {
 	public areaAtuacao(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
@@ -20,7 +19,6 @@ public class areaAtuacao {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
 
 	public long getIdArea() {
 		return idArea;
@@ -30,7 +28,4 @@ public class areaAtuacao {
 		this.idArea = idArea;
 	}
 
-	
-	
-	
 }
